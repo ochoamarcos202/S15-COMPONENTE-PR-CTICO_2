@@ -1,0 +1,44 @@
+{
+  "usuarios": [
+    {
+      "_id": "665f1a0000000000000001",
+      "nombre": "Administrador General",
+      "email": "admin@clinica.com",
+      "password": "$2a$10$hasheado_por_bcrypt",
+      "rol": "admin",
+      "createdAt": "2026-07-01T10:00:00.000Z"
+    },
+    {
+      "_id": "665f1a0000000000000002",
+      "nombre": "Dra. Ana Torres",
+      "email": "ana.torres@clinica.com",
+      "password": "$2a$10$hasheado_por_bcrypt",
+      "rol": "medico",
+      "especialidad": "Cardiologia",
+      "createdAt": "2026-07-01T10:05:00.000Z"
+    },
+    {
+      "_id": "665f1a0000000000000003",
+      "nombre": "Carlos Ramirez",
+      "email": "carlos@correo.com",
+      "password": "$2a$10$hasheado_por_bcrypt",
+      "rol": "paciente",
+      "telefono": "0991234567",
+      "createdAt": "2026-07-01T10:10:00.000Z"
+    }
+  ],
+  "citas": [
+    {
+      "_id": "665f1b0000000000000001",
+      "paciente": "665f1a0000000000000003",
+      "medico": "665f1a0000000000000002",
+      "especialidad": "Cardiologia",
+      "fecha": "2026-07-20T00:00:00.000Z",
+      "hora": "09:30",
+      "motivo": "Control anual de presion arterial",
+      "estado": "pendiente",
+      "notas": "",
+      "createdAt": "2026-07-05T15:30:00.000Z"
+    }
+  ]
+}

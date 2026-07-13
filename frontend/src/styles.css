@@ -1,0 +1,118 @@
+:root {
+  --azul: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --gris: #64748b;
+  --gris-claro: #f1f5f9;
+  --rojo: #dc2626;
+  --verde: #16a34a;
+  --amarillo: #ca8a04;
+  --borde: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--gris-claro);
+  color: #0f172a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar-marca a { font-weight: bold; font-size: 1.2rem; color: var(--azul); text-decoration: none; }
+
+.navbar-enlaces { display: flex; align-items: center; gap: 1.2rem; }
+.navbar-enlaces a { text-decoration: none; color: #0f172a; }
+.navbar-usuario { color: var(--gris); font-size: 0.9rem; }
+
+.contenedor-pagina { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+.contenedor-auth { display: flex; justify-content: center; align-items: center; min-height: 80vh; }
+
+.formulario {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  max-width: 480px;
+  width: 100%;
+}
+
+.formulario-auth { max-width: 400px; }
+
+.campo { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.campo-fila { display: flex; gap: 1rem; }
+.campo-fila .campo { flex: 1; }
+
+label { font-size: 0.9rem; font-weight: 600; color: #334155; }
+
+input, select, textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea { min-height: 70px; resize: vertical; }
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primario { background: var(--azul); color: white; }
+.btn-primario:hover { background: var(--azul-oscuro); }
+.btn-secundario { background: var(--gris-claro); color: #0f172a; border: 1px solid var(--borde); }
+.btn-peligro { background: var(--rojo); color: white; }
+.btn-pequeno { padding: 0.3rem 0.7rem; font-size: 0.85rem; margin-right: 0.4rem; }
+.btn-ancho { width: 100%; }
+
+.acciones-formulario { display: flex; gap: 1rem; margin-top: 1rem; }
+.acciones-tabla { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.encabezado-pagina { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+
+.tarjetas-resumen { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+.tarjeta-numero { font-size: 1.8rem; font-weight: bold; color: var(--azul); }
+
+.tabla-citas { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; }
+.tabla-citas th, .tabla-citas td { padding: 0.8rem; border-bottom: 1px solid var(--borde); text-align: left; }
+.tabla-citas th { background: var(--gris-claro); }
+.panel-historial { background: var(--gris-claro); padding: 0.8rem 1rem; border-radius: 8px; margin: 0.3rem 0; }
+.panel-historial ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+.panel-historial li { margin-bottom: 0.25rem; font-size: 0.9rem; }
+
+.estado { padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.8rem; color: white; }
+.estado-pendiente { background: var(--amarillo); }
+.estado-confirmada { background: var(--azul); }
+.estado-atendida { background: var(--verde); }
+.estado-cancelada { background: var(--rojo); }
+
+.mensaje-error { color: var(--rojo); }
+.mensaje-exito { color: #1a7f37; background: #e6f4ea; padding: 0.6rem 0.9rem; border-radius: 8px; margin-bottom: 0.8rem; }
+.texto-ayuda { display: block; color: var(--gris-texto, #666); font-size: 0.8rem; margin-top: 0.25rem; }
+.mensaje-vacio { color: var(--gris); }
+.mensaje-carga { text-align: center; margin-top: 3rem; }
+.lista-errores { color: var(--rojo); padding-left: 1.2rem; }
+.texto-auxiliar { text-align: center; margin-top: 1rem; font-size: 0.9rem; }
+.subtitulo { color: var(--gris); margin-top: -0.8rem; }
