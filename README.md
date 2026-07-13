@@ -17,6 +17,7 @@ backend en Node.js/Express y frontend en React.
 - [Coleccion de Postman](#coleccion-de-postman)
 - [Diseno en Figma](#diseno-en-figma)
 - [Buenas practicas aplicadas](#buenas-practicas-aplicadas)
+- [Autores](#autores)
 
 ## Descripcion general
 La aplicacion permite:
@@ -185,3 +186,8 @@ La carpeta [`design/`](design/) contiene:
   como en frontend (`PrivateRoute`).
 - Nombres descriptivos en espanol para variables, funciones y archivos,
   manteniendo consistencia en todo el proyecto.
+
+## Autores
+- Adalberto Herdoiza Mera
+- Luis Fernando Guerrero Jimenez
+- Marcos Johan Ochoa Suarez
