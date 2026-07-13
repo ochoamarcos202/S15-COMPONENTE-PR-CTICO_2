@@ -17,7 +17,6 @@ backend en Node.js/Express y frontend en React.
 - [Coleccion de Postman](#coleccion-de-postman)
 - [Diseno en Figma](#diseno-en-figma)
 - [Buenas practicas aplicadas](#buenas-practicas-aplicadas)
-- [Autores](#autores)
 
 ## Descripcion general
 La aplicacion permite:
@@ -70,7 +69,8 @@ frontend separa componentes reutilizables, paginas, contexto de
 autenticacion y capa de servicios (API), evitando logica duplicada.
 
 ## Modelo de datos
-Ver detalle completo en [`database/estructura_bd.md`](database/estructura_bd.md).
+La base de datos usada en el proyecto es **MongoDB**, la base de datos específica es "citas.medicas" y trabaja con dos
+colecciones principales:
 
 **Coleccion `users`**: nombre, email (unico), password (hash), rol
 (paciente/medico/admin), especialidad, telefono.
@@ -78,6 +78,9 @@ Ver detalle completo en [`database/estructura_bd.md`](database/estructura_bd.md)
 **Coleccion `citas`**: paciente (ref. a `users`), medico (ref. a `users`),
 especialidad, fecha, hora, motivo, estado, notas. Incluye un indice unico
 compuesto (medico + fecha + hora) para evitar doble agendamiento.
+
+Archivo de ejemplo para la carga de datos:
+[`database/datos_ejemplo.json`](database/datos_ejemplo.json)
 
 ## Instalacion y ejecucion
 
@@ -89,7 +92,7 @@ compuesto (medico + fecha + hora) para evitar doble agendamiento.
 ```bash
 cd backend
 npm install
-cp .env.example .env      # completar MONGO_URI y JWT_SECRET
+# Crea un archivo `.env` con las variables de abajo
 npm run seed               # (opcional) inserta usuarios y una cita de ejemplo
 npm run dev                 # http://localhost:5000
 ```
@@ -182,6 +185,3 @@ La carpeta [`design/`](design/) contiene:
   como en frontend (`PrivateRoute`).
 - Nombres descriptivos en espanol para variables, funciones y archivos,
   manteniendo consistencia en todo el proyecto.
-
-## Autores
-_Completar con los integrantes del grupo antes de la entrega._
